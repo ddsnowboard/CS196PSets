@@ -17,13 +17,15 @@
 # "dlroW olleH"
 #
 def reverse_string(my_str):
-    l = list(my_str)
-    # Can't be calculating this over and over
-    length = len(my_str)
-    to_middle = int(length / 2) if length % 2 == 1 else int(length / 2)
-    for i in xrange(to_middle):
-        l[i], l[length - i - 1] = l[length - i - 1], l[i]
-    print "".join(l)
+    print my_str[::-1]
+    # This is the best way, but if I were going to be sporting about 
+    # it, this is what I'd do.
+    # l = list(my_str)
+    # length = len(my_str)
+    # to_middle = int(length / 2) if length % 2 == 1 else int(length / 2)
+    # for i in xrange(to_middle):
+    #     l[i], l[length - i - 1] = l[length - i - 1], l[i]
+    # print "".join(l)
 
 # Odd Even
 #
