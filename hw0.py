@@ -168,10 +168,68 @@ def flatten(input):
 #  [u,v,w,x,y]]
 #
 # Ex OUTPUT:
-# [a,b,c,d,e,j,o,t,y,x,w,v,u,p,k,f,g,h,i,n,s,r,q,l,g,h,m]
+# [a,b,c,d,e,j,o,t,y,x,w,v,u,p,k,f,g,h,i,n,s,r,q,l,m]
 #
 def spiralMatrix(input):
-    pass
+    # Base case
+    if len(input) == 1:
+        return input[0]
+
+    # "enum type"
+    GOING = "going"
+    STOPPED = "stopped"
+    RETURNING = "returning"
+
+    currX = 0
+    currY = 0
+    xStatus = GOING
+    yStatus = STOPPED
+    output = []
+    while True:
+        # Add current index
+        output.append(input[currY][currX])
+
+        # Re set statuses
+        if currX == len(input) - 1 and xStatus == GOING:
+            xStatus = STOPPED
+            if currY == len(input) - 1:
+                yStatus = RETURNING
+            else:
+                yStatus = GOING
+        elif currX == 0 and xStatus == RETURNING:
+            xStatus = STOPPED
+            if currY == len(input) - 1:
+                yStatus = RETURNING
+            else:
+                yStatus = GOING
+        elif currY == len(input) - 1 and yStatus == GOING:
+            yStatus = STOPPED
+            if currX == len(input) - 1:
+                xStatus = RETURNING
+            else:
+                xStatus = GOING
+        elif currY == 0 and yStatus == RETURNING:
+            yStatus = STOPPED
+            if currX == len(input) - 1:
+                xStatus = RETURNING
+            else:
+                xStatus = GOING
+
+        # Read statuses and move accordingly
+        if yStatus == GOING:
+            currY += 1
+        elif yStatus == RETURNING:
+            currY -= 1
+        elif xStatus == GOING:
+            currX += 1
+        elif xStatus == RETURNING:
+            currX -= 1
+
+        if (currX == 0 and currY == 0):
+            break
+    return output + spiralMatrix([i[1:-1] for i in input[1:-1]])
+
+
 
 """
 Given a string in a way formatted below, find the number of <name>'s
