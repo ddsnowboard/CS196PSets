@@ -22,7 +22,7 @@ def reverse_string(my_str):
     # it, this is what I'd do.
     # l = list(my_str)
     # length = len(my_str)
-    # to_middle = int(length / 2) if length % 2 == 1 else int(length / 2)
+    # to_middle = int(length / 2)
     # for i in xrange(to_middle):
     #     l[i], l[length - i - 1] = l[length - i - 1], l[i]
     # print "".join(l)
@@ -139,7 +139,7 @@ def fibonacci(input):
     l = [1, 1]
     while len(l) < input:
         l.append(l[-1] + l[-2])
-    return l
+    print l.join(",")
 
 # Given a 2d array, flatten the array.
 #
