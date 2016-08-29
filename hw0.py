@@ -174,6 +174,8 @@ def spiralMatrix(input):
     # Base case
     if len(input) == 1:
         return input[0]
+    elif len(input) == 0:
+        return []
 
     # "enum type"
     GOING = "going"

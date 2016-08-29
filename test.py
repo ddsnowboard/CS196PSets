@@ -49,6 +49,16 @@ class TestHW0(unittest.TestCase):
                         ["u","v","w","x","y"]]),
 ["a","b","c","d","e","j","o","t","y","x","w","v","u","p","k","f","g","h","i","n","s","r","q","l","m"])
 
+        self.assertEqual(
+                spiralMatrix(
+                    [["a","b","c","d","e", "r"],
+                        ["f","g","h","i","j","r"],
+                        ["k","l","m","n","o","m"],
+                        ["p","q","r","s","t","l"],
+                        ["u","v","w","x","y","p"],
+                        ["p","w","z","r","v","q"]]),
+list("abcderrmlpqvrzwpupkfghijotyxwvqlmnsr"))
+
 
 if __name__ == '__main__':
     unittest.main()
