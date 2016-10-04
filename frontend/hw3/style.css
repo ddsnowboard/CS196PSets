@@ -1,0 +1,27 @@
+/* Color scheme: https://coolors.co/4c4149-765f59-767a7f-d1dce0-a5adb3 
+ * image: https://images.unsplash.com/photo-1422898645387-1db58c9dea01?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb
+ * */
+
+html {
+    background-color: #d1dce0;
+}
+body {
+    width: 80%;
+    margin: 20px auto;
+}
+
+div#header {
+    background-image: url("img/splash.jpg");
+    background-size: cover;
+    height: 500px;
+    background-position: 0% 75%;
+    position: relative;
+}
+
+div#text-holder {
+    color: #ffffff;
+    bottom: 28%;
+    left: 27px;
+    position: absolute;
+    font-size: 1.6em;
+}

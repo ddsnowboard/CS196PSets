@@ -50,7 +50,8 @@ p {
     margin-right: auto;
     width: 70%;
     margin-top: 75px;
-    font-family: sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.3em;
     color: #838383;
 }
 
@@ -61,8 +62,8 @@ html {
 
 .footer {
     text-align: center;
-    background-color: #fafafa;
+    background-color: whitesmoke;
     height: 100px;
     line-height: 100px;
-    color: #bdbdbd;
+    color: #989898;
 }
